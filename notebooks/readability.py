@@ -34,7 +34,7 @@ def extract_images(filename):
                     pix1 = None 
                 pix = None
             except:
-                print('Error encountered at file.')
+                print('ERROR ENCOUNTERED AT FILE.')
         
     return print("Number of images extracted = ", imgcount)
 
