@@ -23,15 +23,16 @@ def extract_images(filename):
                 pix = fitz.Pixmap(doc, xref)
                 imgcount += 1
                 if pix.n > 5:
-                    name = out_path + 'p%s-%s.jpg' %(i, xref)
-                    pix.save(name)
+                    name = 'p%s-%s.jpg' %(i, xref)
+                    output = os.path.join(out_path, name)
+                    pix.save(output)
                 else:
                     pix1 = fitz.Pixmap(fitz.csRGB, pix)
                     name = 'p%s-%s.jpg' %(i, xref)
                     output = os.path.join(out_path, name)
                     pix1.save(output)
                     pix1 = None 
-                #pix = None
+                pix = None
             except:
                 print('Error encountered at file.')
         
