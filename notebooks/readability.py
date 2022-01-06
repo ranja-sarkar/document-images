@@ -38,12 +38,13 @@ def extract_images(filename):
         
     return print("Number of images extracted = ", imgcount)
 
+#OUTPUT
 extract_images("DL_flow.pdf")
 print("Time taken (s) = ", round(time.perf_counter(), 2))
 
 
 '''
-##PIL can be used to view the images
+##PIL can be used to view image in the dir/folder
 from PIL import Image
 from pylab import *
 
